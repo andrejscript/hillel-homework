@@ -1,0 +1,18 @@
+/* Main_stylesheet_hillel_hw-1 */
+
+body {
+background: rgb(162, 255, 175);
+font-size: 48px;
+font-family: 'Courier Prime', monospace;
+}
+
+.wrap {
+    width: 100%;
+}
+
+p.start {
+    width: 100%;
+    text-align: center;
+    margin: 120px auto;
+    color: rgb(44, 44, 44);
+}
