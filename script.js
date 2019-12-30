@@ -1,43 +1,68 @@
 'use strict'
 
 // // //
-// Call average calculator
+// Call average calculator #2
 
-let firstNumber = null;
-let secondNumber = null;
-let result = null;
+let operator;
+let amount;
+let nextNum;
+let arrOperands = [];
+let result;
 
-mainLoop: while (true) {
-    let operator = prompt('Выберите и введите математический оператор "+,-,*,/"');
+// #1 check operator
+do {
+    operator = prompt("Plz, make your choice: add'+', sub'-', mult'/', div'*'");
+  } while ( 
+    operator !== 'add' &&
+    operator !== 'sub' &&
+    operator !== 'mult' &&
+    operator !== 'div'
+);
+console.log (operator);
 
-    if (operator == "+" || operator == "-" || operator == "*" || operator == "/") {
-        alert('Ok Lets go!');
-    } else {
+//#2 check amount of operands 
+do {
+    amount = prompt('Plz, make you need operands (1-5)');
+  } while (
+        amount <= 0 ||
+        amount >= 6 ||
+        isNaN(amount) && 
+        amount === ''
+    );
 
-        alert('Enter right operator');
-        continue;
+amount = Number(amount);
+console.log (amount);
+
+
+//#3 enter & check operators 
+do {
+    alert('Plz, enter operands by edicher');
+
+    for (nextNum = 0; nextNum < amount; nextNum++) {            
+        arrOperands.push(+prompt('Введите число №' + (nextNum+1)));
     }
+    
+} while (
+    isNaN(nextNum) && 
+    nextNum === ''
+);
 
-    firstNumber = +prompt("Pls enter value № 1");
-    secondNumber = +prompt("Pls enter value № 2");
+console.log('Список: ' + arrOperands); 
 
-    if (isNaN(firstNumber)) {
-        alert("First value is not a number! Try again");
-        continue;
-    } else if (isNaN(secondNumber)) {
-        alert("Second value is not a number! Try again");
-        continue;
-    }
-
-    if (operator == "+") {
-        result = (firstNumber + secondNumber);
-    } else if (operator == "-") {
-        result = (firstNumber - secondNumber);
-    } else if (operator == "*") {
-        result = (firstNumber * secondNumber);
-    } else if (operator == "/") {
-        result = (firstNumber / secondNumber);
-    }
-    alert(result);
-    break mainLoop;
+// #4 Math operations
+switch (operator) {
+    case 'add':
+        result = arrOperands.reduce((sum, current) => sum + current, 0);
+        break;
+    case 'sub':
+        result = arrOperands.reduce((a, b) => a - b, 0);
+        break;
+    case 'mult':
+        result = arrOperands.reduce((a, b) => a * b, 0);
+        break;
+    case 'div':
+        result = arrOperands.reduce((a, b) => a / b, 0);
+        break;
 }
+
+alert(result);
