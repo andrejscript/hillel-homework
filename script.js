@@ -52,16 +52,16 @@ console.log('Список: ' + arrOperands);
 // #4 Math operations
 switch (operator) {
     case 'add':
-        result = arrOperands.reduce((sum, current) => sum + current, 0);
+        result = arrOperands.reduce((sum, current) => sum + current);
         break;
     case 'sub':
-        result = arrOperands.reduce((a, b) => a - b, 0);
+        result = arrOperands.reduce((sub, current) => sub - current);
         break;
     case 'mult':
-        result = arrOperands.reduce((a, b) => a * b, 0);
+        result = arrOperands.reduce((mult, current) => mult * current);
         break;
     case 'div':
-        result = arrOperands.reduce((a, b) => a / b, 0);
+        result = arrOperands.reduce((div, current) => div / current);
         break;
 }
 
