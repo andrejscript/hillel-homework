@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HW # 9 Contact book</title>
+    <link href="https://fonts.googleapis.com/css?family=Courier+Prime:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+
+<body>
+    <div class="wrapper">
+    </div>
+    <div class="container">
+        <div class="table-wrap flex-col">
+            <h1>Contact book</h1>
+            <ul class="grid main-grid">
+                <li class="title">Name</li>
+                <li class="title">Surname</li>
+                <li class="title">Phone</li>
+                <li class="title">Action</li>
+            </ul>
+            <form class="grid grid-second enter-form">
+                <label>
+                    <input class="main-input" id="name-input" placeholder="Name"></input>
+                </label>
+                <label>
+                    <input class="main-input" id="surname-input" placeholder="Surname"></input>
+                </label>
+                <label>
+                    <input class="main-input" id="phone-input" placeholder="Phone" maxlength="10"></input>
+                </label>
+                <label>
+                    <input class="main-input" id="action-input" placeholder="Action" minlength="2" maxlength="14"></input>
+                </label>
+                <button class="enter-btn">Enter</button>
+            </form>
+
+            <div class="submit-error">
+                <p>Заполните все поля!</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>

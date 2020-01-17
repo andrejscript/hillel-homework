@@ -1,0 +1,236 @@
+/* Main_stylesheet_hillel_hw-1 */
+
+*:hover,
+*:focus {
+    outline: none;
+}
+
+body {
+    font-size: 18px;
+    font-family: "Courier Prime", monospace;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg,
+            rgba(2, 0, 36, 1) 0%,
+            rgb(139, 133, 75) 65%,
+            rgb(230, 222, 112) 100%);
+    color: #fff;
+}
+
+.wrapper {
+    position: absolute;
+    z-index: -1;
+    height: 100vh;
+    width: 97%;
+    opacity: 0.03;
+    background: url(../img/rad.png) no-repeat;
+    background-size: contain;
+    background-position: right 220px;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    /* padding: 0 15px 0 15px; */
+}
+
+h1 {
+    margin: 10px 0 5px;
+    font-size: 36px;
+}
+
+.grid {
+    display: grid;
+    margin-top: 50px;
+    grid-template-rows: repeat(1, 1fr);
+    grid-template-columns: 1fr 1.5fr 1.5fr 1.5fr;
+    /* grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); */
+    grid-gap: 5px;
+    padding-left: 0;
+}
+
+.grid-second {
+    display: grid;
+    margin-top: 20px;
+    grid-template-rows: repeat(1, 1fr);
+    /* grid-template-columns: repeat(5, 1fr); */
+    grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+    grid-gap: 5px;
+}
+
+.grid .title {
+    font-weight: 700;
+}
+
+.grid>li {
+    display: flex;
+    align-items: baseline;
+    font-size: 18px;
+    padding: 5px 2%;
+    background: rgb(255, 209, 81);
+    text-align: center;
+    color: #000;
+    border: 2px solid #fff;
+    list-style: none;
+    transition: 0.3s;
+    border-radius: 4px;
+}
+
+.grid>li:hover {
+    background: rgb(201, 162, 56);
+    transition: 0.3s;
+}
+
+.grid>li>p {
+    margin: 0;
+}
+
+.grid-second>label {
+    font-size: 18px;
+    padding: 5px 2%;
+    background: rgb(247, 238, 215);
+    text-align: center;
+    color: #000;
+    /* border: 2px solid rgb(255, 209, 81); */
+    border-radius: 4px;
+}
+
+.grid-second.border-red>label {
+    border: 2px solid rgb(219, 35, 35);
+}
+
+.grid-second>button {
+    font-size: 18px;
+    background: rgb(240, 172, 0);
+    color: rgb(255, 255, 255);
+    border: 2px solid rgb(219, 168, 28);
+    transition: 0.3s;
+    border-radius: 4px;
+}
+
+.grid-second>button:hover {
+    font-size: 16px;
+    background: rgb(116, 83, 0);
+    text-align: center;
+    color: rgb(255, 255, 255);
+    border: 2px solid rgb(163, 120, 0);
+    transition: 0.3s;
+    transform: scale(0.9);
+    -webkit-box-shadow: 2px 2px 22px 0px rgba(255, 238, 234, 0.99);
+    -moz-box-shadow: 2px 2px 22px 0px rgba(255, 225, 218, 0.99);
+    box-shadow: 2px 2px 22px 0px rgba(255, 234, 230, 0.99);
+}
+
+.grid-second>label>input {
+    border: 0;
+    background: 0;
+    width: 100%;
+    min-height: 10px;
+}
+
+.item {
+    grid-column: 1 / -1;
+}
+
+.table-wrap {
+    margin-left: 5%;
+    text-align: center;
+    position: relative;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.main-form label,
+.main-form button {
+    max-width: 320px;
+}
+
+.main-form button {
+    max-width: 200px;
+    margin: 5px auto;
+    width: 140px;
+    height: 25px;
+    background: #38bf00;
+    border: 1px solid #ffffff;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+.main-form button:hover {
+    background: #fff;
+    transition: 0.3s;
+    box-shadow: 0px 0px 3px 2px rgb(169, 255, 148);
+}
+
+.main-form input {
+    margin: 10px 0;
+}
+
+.main-form input {
+    border: unset;
+    border-radius: 3px;
+    height: 10px;
+    padding: 10px 0 5px 5px;
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+.submit-error {
+    display: none;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 360px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgb(218, 151, 151, 0.6);
+    width: 280px;
+    max-height: 40px;
+    border: 1px solid rgb(253, 103, 16);
+}
+
+.d-flex {
+    display: flex;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        max-width: 900px;
+    }
+}
+
+@media screen and (max-width: 460px) {
+    .container {
+        width: 98%;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .grid .title {
+        padding-left: 25%;
+    }
+
+    .grid>li {
+        font-size: 12px;
+    }
+
+    input,
+    .grid-second>button {
+        font-size: 12px;
+        min-height: 30px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+
+    .grid>li,
+    .grid-second>input {
+        font-size: 10px;
+    }
+}
