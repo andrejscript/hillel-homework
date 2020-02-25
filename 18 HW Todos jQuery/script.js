@@ -3,7 +3,7 @@
 $(function () { 
     function SaveItem() {
         let text = $('#text').val(); // геттер из инпута
-        if (text != '') // проверка заполнения инпута
+        if (text !== '') // проверка заполнения инпута
         {
             let item = $('<li></li>').html(text); // создание нового пункта списка
             item.append(`<input class='del' type='button' value='X'></input>`); // создание кнопки удаления пунтка
