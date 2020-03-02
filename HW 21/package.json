@@ -1,0 +1,17 @@
+{
+  "name": "calculator-node-js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "keywords": [
+    "calc",
+    "node",
+    "js"
+  ],
+  "author": "Me",
+  "license": "ISC"
+}
